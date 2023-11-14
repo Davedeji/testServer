@@ -24,7 +24,9 @@ const server = http.createServer((req, res) => {
     });
     req.on('end', () => {
       try {
+        
         const { username, password } = JSON.parse(body); // Parse the JSON body
+        console.log(username, password);
         if (username === 'admin' && password === 'xPA$81') {
           res.writeHead(200, {
             'Set-Cookie': 'token=123456; HttpOnly; ',
