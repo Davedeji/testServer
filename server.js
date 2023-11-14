@@ -5,6 +5,7 @@ const server = http.createServer((req, res) => {
   // if you run the client from sth like file:///C:/nodejs/10httonlyCookie1/index.html
   // it would mean HTML file is being served via the file:// protocol directly from your filesystem rather than over HTTP or HTTPS.
   console.log('Request origin:', req.headers.origin);
+  console.log('Request url:', req.url);
   res.setHeader('Access-Control-Allow-Origin', '*');// Adjust the port if necessary
   res.setHeader('Access-Control-Allow-Credentials', 'true');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
