@@ -24,6 +24,7 @@ const server = http.createServer((req, res) => {
       body += chunk.toString(); // convert Buffer to string
     });
     req.on('end', () => {
+      console.log(body);
       try {
         
         const { username, password } = JSON.parse(body); // Parse the JSON body
